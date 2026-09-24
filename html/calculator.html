@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/calculator.css">
+    <title>CEC</title>
+</head>
+<body>
+
+    <div class="typeMenu">
+        <label for="projects">Project type</label>
+        <div class="typeButtons">
+            <button class="typeButton">FromJS</button>
+            <button class="addTypeButton">+</button>
+            <button class="deleteTypeButton">-</button>
+        </div>
+    </div>
+
+    <div class="showComplexity">
+        <label for="complexity">Estimated complexity</label>
+        <p id="complexity">[o o o o o o o ]</p>
+    </div>
+
+    <div class="stages">
+        <label for="stages">Stages</label>
+        <div class="stage">
+            <label for="stage1">Stage 1</label>
+            <input type="number" id="stage1" name="stage1" min="0" max="99">
+        </div>
+        <div class="stage">
+            <label for="stage2">Stage 2</label>
+            <input type="number" id="stage2" name="stage2" min="0" max="99">
+        </div>
+    </div>
+
+    <div class="estimatedTime">
+        <label for="estimatedTime">Estimated time:</label>
+        <p id="estimatedTime">0</p>
+    </div>
+
+    <div class="hourlyRate">
+        <label for="hourlyRate">Hourly rate:</label>
+        <input type="number" id="hourlyRate" name="hourlyRate">
+    </div>
+
+    <div class="estimatedCost">
+        <label for="estimatedCost">Estimated cost:</label>
+        <p id="estimatedCost">0</p>
+    </div>
+
+    <script src="../javascript/type.js"></script>
+</body>
+</html>

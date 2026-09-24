@@ -1,0 +1,94 @@
+body{
+    margin: 32px;
+}
+
+p{
+    margin: 0;
+}
+
+input{
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+
+input:focus{
+    outline:none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+label{
+    margin-right: 8px;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.typeMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.typeButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 8px 0 32px 0;
+}
+
+.showComplexity{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.stages{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.stage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 8px 0 8px 0;
+}
+
+.estimatedTime{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.hourlyRate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.estimatedCost{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
