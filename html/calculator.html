@@ -11,10 +11,12 @@
     <div class="typeMenu">
         <label for="projects">Project type</label>
         <div class="typeButtons">
-            <button class="typeButton">FromJS</button>
+            <button onclick="dropdownToggle()" class="typeButton">Select</button>
             <button class="addTypeButton">+</button>
             <button class="deleteTypeButton">-</button>
         </div>
+
+        <div class="typeDropdown"></div>
     </div>
 
     <div class="showComplexity">
@@ -42,6 +44,7 @@
     <div class="hourlyRate">
         <label for="hourlyRate">Hourly rate:</label>
         <input type="number" id="hourlyRate" name="hourlyRate">
+        <p>$</p>
     </div>
 
     <div class="estimatedCost">

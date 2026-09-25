@@ -6,6 +6,12 @@ p{
     margin: 0;
 }
 
+li{
+    list-style-type: none;
+    margin: 8px 0 8px 0;
+    cursor: pointer;
+}
+
 input{
     width: 16px;
     height: 16px;
@@ -52,6 +58,19 @@ button {
     flex-direction: row;
     gap: 8px;
     margin: 8px 0 32px 0;
+}
+
+.typeDropdown{
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 0 8px 0 8px;
+    width: fit-content;
+    height: fit-content;
+    top: 57px;
+    right: 32px;
+
+    display: none;
 }
 
 .showComplexity{
