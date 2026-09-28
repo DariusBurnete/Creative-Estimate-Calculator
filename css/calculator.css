@@ -65,8 +65,9 @@ button {
     border: 1px solid #000;
     border-radius: 2px;
     padding: 0 8px 0 8px;
-    width: fit-content;
+    width: 110px;
     height: fit-content;
+    max-height: 320px;
     top: 57px;
     right: 32px;
 
@@ -74,15 +75,17 @@ button {
 }
 
 .showComplexity{
-    display: flex;
     flex-direction: column;
     margin-bottom: 32px;
+
+    display: none;
 }
 
 .stages{
-    display: flex;
     flex-direction: column;
     margin-bottom: 32px;
+
+    display: none;
 }
 
 .stage{
