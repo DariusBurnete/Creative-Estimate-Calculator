@@ -3,147 +3,171 @@
   "projects": [
     {
       "name": "Illustration",
-      "complexity": 0,
       "stages": [
         {
           "name": "Research",
-          "hours": 0
+          "hours": 23.1,
+          "minutes": 16.1
         },
         {
           "name": "Sketching",
-          "hours": 0
+          "hours": 12.5,
+          "minutes": 0
         },
         {
           "name": "Lineart",
-          "hours": 0
+          "hours": 0,
+          "minutes": 55.8
         },
         {
           "name": "Color",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Rendering",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         }
       ]
     },
     {
       "name": "Character Design",
-      "complexity": 0,
       "stages": [
         {
           "name": "Research",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Thumbnailing",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Sketching",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Lineart",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Color",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Rendering",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         }
       ]
     },
     {
       "name": "Logo Design",
-      "complexity": 0,
       "stages": [
         {
           "name": "Research",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Concepts",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Sketching",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Vectorization",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Revisions",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Export",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         }
       ]
     },
     {
       "name": "3D Modeling",
-      "complexity": 0,
       "stages": [
         {
           "name": "Reference",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Blockout",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Modeling",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "UV Mapping",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Texturing",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Rendering",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         }
       ]
     },
     {
       "name": "Animation",
-      "complexity": 0,
       "stages": [
         {
           "name": "Research",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Storyboard",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Animatic",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Animation",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Rendering",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         },
         {
           "name": "Editing",
-          "hours": 0
+          "hours": 0,
+          "minutes": 0
         }
       ]
     }

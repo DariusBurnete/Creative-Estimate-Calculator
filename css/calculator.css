@@ -13,11 +13,12 @@ li{
 }
 
 input{
-    width: 16px;
+    width: 34px;
     height: 16px;
     padding: 2px;
     border: 1px solid #000;
     border-radius: 2px;
+    margin-right: 8px;
 }
 
 input:focus{
@@ -96,10 +97,11 @@ button {
 }
 
 .estimatedTime{
-    display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 32px;
+
+    display: none;
 }
 
 .hourlyRate{
@@ -109,8 +111,16 @@ button {
     margin-bottom: 32px;
 }
 
+.hourlyRate input{
+    width: 16px;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
 .estimatedCost{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
