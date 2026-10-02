@@ -1,4 +1,5 @@
-import { CalculateEstimatedTime, UpdateEstimatedTime, CheckInput } from "./estimated_time.js";
+import { CalculateEstimatedTime, UpdateEstimatedTime, CheckInput, ResetEstimatedTime } from "./estimated_time.js";
+import { SetHourlyRate, CalculateEstimatedCost } from "./cost.js";
 
 window.onload = fetchDefaultTypes();
 window.dropdownToggle = dropdownToggle;
@@ -26,6 +27,7 @@ function fetchDefaultTypes() {
                 });
                 dropdown.append(listItem);
             }
+            SetHourlyRate(data.hourlyRate);
         })
 }
 
@@ -33,9 +35,10 @@ function SelectType(typeName, typeStages) {
     const typeButton = document.querySelector(".typeButton");
     const showComplexity = document.querySelector("#showComplexity");
     typeButton.textContent = "Selected: " + typeName;
-    showComplexity.textContent = '[' + ']'; // TBD
+    showComplexity.textContent = '[' + ']';
     CreateStagesItems(typeStages);
     DisplayTypeData();
+    CalculateEstimatedCost();
 }
 
 function DisplayTypeData() {
@@ -54,6 +57,7 @@ function CreateStagesItems(typeStages) {
         const stageItem = SetStageItem(stage);
         stagesContainer.append(stageItem);
     }
+    ResetEstimatedTime();
     CalculateEstimatedTime();
 }
 
@@ -106,6 +110,7 @@ function CreateTimeInput(stage, unit) {
         UpdateEstimatedTime(timeInput.value, oldValue, unit);
         oldValue = CheckInput(timeInput.value, unit);
         timeInput.value = CheckInput(timeInput.value, unit);
+        CalculateEstimatedCost();
     });
     return timeInput;
 }

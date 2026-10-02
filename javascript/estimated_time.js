@@ -1,4 +1,4 @@
-let totalHours = 0; let totalMinutes = 0;
+export let totalHours = 0; export let totalMinutes = 0;
 const estimatedTimeElement = document.querySelector("#estimatedTime");
 
 export function CalculateEstimatedTime() {
@@ -42,3 +42,10 @@ export function CheckInput(value, unit) {
     if (unit === "hours" && value > 999) return 999;
     return value;
 }
+
+export function ResetEstimatedTime() {
+    totalHours = 0;
+    totalMinutes = 0;
+    estimatedTimeElement.textContent = `${totalHours} hours, ${totalMinutes} minutes`;
+}
+
