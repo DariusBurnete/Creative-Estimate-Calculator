@@ -1,5 +1,6 @@
 import { CalculateEstimatedTime, UpdateEstimatedTime, CheckInput, ResetEstimatedTime } from "./estimated_time.js";
 import { SetHourlyRate, CalculateEstimatedCost } from "./cost.js";
+import { SetComplexity } from "./complexity.js";
 
 window.onload = fetchDefaultTypes();
 window.dropdownToggle = dropdownToggle;
@@ -33,12 +34,11 @@ function fetchDefaultTypes() {
 
 function SelectType(typeName, typeStages) {
     const typeButton = document.querySelector(".typeButton");
-    const showComplexity = document.querySelector("#showComplexity");
     typeButton.textContent = "Selected: " + typeName;
-    showComplexity.textContent = '[' + ']';
     CreateStagesItems(typeStages);
     DisplayTypeData();
     CalculateEstimatedCost();
+    SetComplexity();
 }
 
 function DisplayTypeData() {
@@ -111,6 +111,7 @@ function CreateTimeInput(stage, unit) {
         oldValue = CheckInput(timeInput.value, unit);
         timeInput.value = CheckInput(timeInput.value, unit);
         CalculateEstimatedCost();
+        SetComplexity();
     });
     return timeInput;
 }

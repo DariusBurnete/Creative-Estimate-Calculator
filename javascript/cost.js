@@ -1,6 +1,8 @@
 import { totalHours, totalMinutes } from "./estimated_time.js";
 
-export let hourlyRateValue = 0;
+export let totalTimeInHours = 0;
+let hourlyRateValue = 0; 
+const kWh = 0.69;
 
 export function SetHourlyRate(value) {
     const hourlyRate = document.querySelector("#hourlyRate");
@@ -22,7 +24,7 @@ function CheckValue(value) {
 
 export function CalculateEstimatedCost() {
     const estimatedCostElement = document.querySelector("#estimatedCost");
-    const totalTimeInHours = totalHours + totalMinutes / 60;
-    const estimatedCost = totalTimeInHours * hourlyRateValue;
+    totalTimeInHours = totalHours + totalMinutes / 60
+    const estimatedCost = totalTimeInHours * hourlyRateValue + kWh * totalTimeInHours;
     estimatedCostElement.textContent = `${estimatedCost.toFixed(2)} $`;
 }
