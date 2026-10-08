@@ -68,9 +68,32 @@ button {
     padding: 0 8px 0 8px;
     width: 110px;
     height: fit-content;
-    max-height: 320px;
+    max-height: 164px;
     top: 57px;
     right: 32px;
+}
+
+.addTypeDropdown{
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 8px;
+    height: fit-content;
+    max-height: 640px;
+}
+
+.addTypeDropdown input{
+    width: 50%;
+    min-width: 108px;
+}
+
+.newStageInputs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.newStageInputs input, #saveNewType{
+    margin-top: 8px;
 }
 
 .showComplexity{
@@ -120,5 +143,5 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 32px;
 }
-

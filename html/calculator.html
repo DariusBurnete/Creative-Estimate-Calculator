@@ -5,46 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/calculator.css">
     <script type="module" src="../javascript/type.js" defer></script>
+    <script type="module" src="../javascript/json_ads.js" defer></script>
     <title>CEC</title>
 </head>
 <body>
 
     <div class="typeMenu">
-        <label for="projects">Project type</label>
+        <label>Project type</label>
         <div class="typeButtons">
-            <button onclick="dropdownToggle()" class="typeButton">Select</button>
-            <button class="addTypeButton">+</button>
-            <button class="deleteTypeButton">-</button>
+            <button onclick="DropdownToggle()" class="typeButton">Select</button>
+            <button onclick="AddTypeToggle()" class="addTypeButton">+</button>
+            
+            <button onclick="DeleteTypeToggle()" class="deleteTypeButton">-</button>
         </div>
 
         <div class="typeDropdown" style="display: none;"></div>
     </div>
 
     <div class="showComplexity">
-        <label for="complexity">Estimated complexity</label>
+        <label>Estimated complexity</label>
         <p id="showComplexity"></p>
     </div>
 
     <div class="stages">
-        <label for="stages">Stages | hours | minutes</label>
+        <label>Stages | hours | minutes</label>
     </div>
 
     <div class="estimatedTime">
-        <label for="estimatedTime">Estimated time:</label>
+        <label>Estimated time:</label>
         <p id="estimatedTime"></p>
     </div>
 
     <div class="hourlyRate">
-        <label for="hourlyRate">Hourly rate:</label>
-        <input type="number" id="hourlyRate" name="hourlyRate" required>
+        <label>Hourly rate:</label>
+        <input type="number" id="hourlyRate" name="hourlyRate">
         <p>$</p>
     </div>
 
     <div class="estimatedCost">
-        <label for="estimatedCost">Estimated cost:</label>
+        <label>Estimated cost:</label>
         <p id="estimatedCost"></p>
     </div>
 
-    
+    <div class="typeButtons">
+        <button onclick="" class="SaveButton" title="Save the json file that contains types of projects">
+            Save values
+        </button>
+    </div>
+
+    <div class="addTypeDropdown" style="display: none;">
+        <input type="text" id="addTypeName" name="addTypeName" placeholder="Enter new type">
+        <button onclick="AddStage()" id="addTypeStage">Add Stage</button>
+        <div class="newStageInputs"></div>
+        <button onclick="SaveNewType()" id="saveNewType">Save</button>
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+  "name": "creative-estimate-calculator",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node javascript/server.js",
+    "dev": "node --watch javascript/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

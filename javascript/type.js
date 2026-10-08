@@ -2,10 +2,10 @@ import { CalculateEstimatedTime, UpdateEstimatedTime, CheckInput, ResetEstimated
 import { SetHourlyRate, CalculateEstimatedCost } from "./cost.js";
 import { SetComplexity } from "./complexity.js";
 
-window.onload = fetchDefaultTypes();
-window.dropdownToggle = dropdownToggle;
+window.onload = FetchDefaultTypes();
+window.DropdownToggle = DropdownToggle;
 
-function dropdownToggle() {
+function DropdownToggle() {
     const dropdown = document.querySelector(".typeDropdown");
     if (dropdown.style.display === "none") {
         dropdown.style.display = "block";
@@ -14,7 +14,7 @@ function dropdownToggle() {
     }
 }
 
-function fetchDefaultTypes() {
+function FetchDefaultTypes() {
     const dropdown = document.querySelector(".typeDropdown");
     const request = new Request("../json/default.json");
     fetch(request)
@@ -102,7 +102,6 @@ function CreateTimeInput(stage, unit) {
     timeInput.type = "number";
     timeInput.id = stage.name + '-' + unit;
     timeInput.name = stage.name + '-' + unit;
-    timeInput.required = true;
     timeInput.value = CheckInput(stage[unit], unit);
 
     let oldValue = timeInput.value;
