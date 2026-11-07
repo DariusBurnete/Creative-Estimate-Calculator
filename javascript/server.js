@@ -40,6 +40,46 @@ app.post("/api/types", async (request, response, next) => {
     }
 });
 
+app.put("/api/types", async (request, response, next) => {
+    try {
+        const updatedType = request.body;
+
+        if (
+            !updatedType ||
+            typeof updatedType.name !== "string" ||
+            !updatedType.name.trim() ||
+            !Array.isArray(updatedType.stages) ||
+            updatedType.stages.some(stage =>
+                !stage ||
+                typeof stage.name !== "string" ||
+                !Number.isFinite(stage.hours) ||
+                !Number.isFinite(stage.minutes)
+            )
+        ) {
+            response.status(400).json({ error: "Invalid project type values." });
+            return;
+        }
+
+        const fileContents = await readFile(jsonPath, "utf8");
+        const data = JSON.parse(fileContents);
+        const projectIndex = data.projects.findIndex(
+            project => project.name === updatedType.name
+        );
+
+        if (projectIndex === -1) {
+            response.status(404).json({ error: "Project type not found." });
+            return;
+        }
+
+        data.projects[projectIndex] = updatedType;
+        await writeFile(jsonPath, JSON.stringify(data, null, 2));
+
+        response.sendStatus(204);
+    } catch (error) {
+        next(error);
+    }
+});
+
 app.delete("/api/delete", (request, response) => {
     const { name } = request.body;
 

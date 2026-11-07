@@ -6,27 +6,27 @@
       "stages": [
         {
           "name": "Research",
-          "hours": 23.1,
-          "minutes": 16.1
+          "hours": 2,
+          "minutes": 0
         },
         {
           "name": "Sketching",
-          "hours": 12.5,
+          "hours": 5,
           "minutes": 0
         },
         {
           "name": "Lineart",
-          "hours": 0,
-          "minutes": 55.8
+          "hours": 1,
+          "minutes": 0
         },
         {
           "name": "Color",
-          "hours": 0,
+          "hours": 2,
           "minutes": 0
         },
         {
           "name": "Rendering",
-          "hours": 0,
+          "hours": 3,
           "minutes": 0
         }
       ]

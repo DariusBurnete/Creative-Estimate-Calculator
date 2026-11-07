@@ -4,8 +4,9 @@ window.SaveNewType = SaveNewType;
 window.DeleteType = DeleteType;
 window.SaveValues = SaveValues;
 
-import { WriteNewTypeToJSON } from "./write.js";
+import { WriteNewTypeToJSON, WriteTypeValuesToJSON } from "./write.js";
 import { deleteProject } from "./delete.js";
+import { currentProjectName } from "./type.js";
 
 function AddTypeToggle() {
     const addTypeDropdown = document.querySelector(".addTypeDropdown");
@@ -54,5 +55,25 @@ function DeleteType() {
 }
 
 function SaveValues() {
-    
+    if (!currentProjectName) return;
+
+    const stages = Array.from(document.querySelectorAll(".stages .stage")).map(stageElement => {
+        const stageName = stageElement.querySelector("label").textContent;
+        const inputs = stageElement.querySelectorAll("input");
+
+        return {
+            name: stageName,
+            hours: Number(inputs[0].value),
+            minutes: Number(inputs[1].value)
+        };
+    });
+
+    WriteTypeValuesToJSON({
+        name: currentProjectName,
+        stages
+    })
+        .then(() => window.location.reload())
+        .catch((error) => {
+            console.error("Error saving type values:", error);
+        });
 }
