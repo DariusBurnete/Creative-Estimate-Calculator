@@ -1,6 +1,7 @@
 import express from "express";
 import path from "node:path";
 import { readFile, writeFile } from "node:fs/promises";
+import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const app = express();
@@ -36,6 +37,50 @@ app.post("/api/types", async (request, response, next) => {
         response.sendStatus(204);
     } catch (error) {
         next(error);
+    }
+});
+
+app.delete("/api/delete", (request, response) => {
+    const { name } = request.body;
+
+    if (!name) {
+        return response.status(400).json({
+            message: "Project name is required"
+        });
+    }
+
+    try {
+        const data = JSON.parse(readFileSync(jsonPath, "utf8"));
+
+        const projectExists = data.projects.some(
+            project => project.name === name
+        );
+
+        if (!projectExists) {
+            return response.status(404).json({
+                message: "Project not found"
+            });
+        }
+
+        data.projects = data.projects.filter(
+            project => project.name !== name
+        );
+
+        writeFileSync(
+            jsonPath,
+            JSON.stringify(data, null, 2)
+        );
+
+        response.json({
+            message: "Project deleted successfully",
+            projects: data.projects
+        });
+
+    } catch (error) {
+        console.error(error);
+        response.status(500).json({
+            message: "Error deleting project"
+        });
     }
 });
 

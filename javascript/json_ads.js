@@ -1,9 +1,11 @@
 window.AddTypeToggle = AddTypeToggle;
 window.AddStage = AddStage;
 window.SaveNewType = SaveNewType;
-window.DeleteTypeToggle = DeleteTypeToggle;
+window.DeleteType = DeleteType;
+window.SaveValues = SaveValues;
 
-import { WriteNewTypeToJSON } from "./read_write.js";
+import { WriteNewTypeToJSON } from "./write.js";
+import { deleteProject } from "./delete.js";
 
 function AddTypeToggle() {
     const addTypeDropdown = document.querySelector(".addTypeDropdown");
@@ -43,4 +45,14 @@ function SaveNewType() {
         });
 }
 
-function DeleteTypeToggle() {}
+function DeleteType() {
+    deleteProject()
+        .then(() => window.location.reload())
+        .catch((error) => {
+            console.error("Error deleting the type", error);
+        });
+}
+
+function SaveValues() {
+    
+}

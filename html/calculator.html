@@ -15,8 +15,7 @@
         <div class="typeButtons">
             <button onclick="DropdownToggle()" class="typeButton">Select</button>
             <button onclick="AddTypeToggle()" class="addTypeButton">+</button>
-            
-            <button onclick="DeleteTypeToggle()" class="deleteTypeButton">-</button>
+            <button onclick="DeleteType()" class="deleteTypeButton" title="Delete selected type">-</button>
         </div>
 
         <div class="typeDropdown" style="display: none;"></div>
@@ -48,7 +47,7 @@
     </div>
 
     <div class="typeButtons">
-        <button onclick="" class="SaveButton" title="Save the json file that contains types of projects">
+        <button onclick="SaveValues()" class="saveButton" title="Save the new values of an existing type">
             Save values
         </button>
     </div>

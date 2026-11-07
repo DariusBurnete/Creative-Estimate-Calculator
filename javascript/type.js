@@ -5,6 +5,8 @@ import { SetComplexity } from "./complexity.js";
 window.onload = FetchDefaultTypes();
 window.DropdownToggle = DropdownToggle;
 
+export let currentProjectName = "";
+
 function DropdownToggle() {
     const dropdown = document.querySelector(".typeDropdown");
     if (dropdown.style.display === "none") {
@@ -25,6 +27,7 @@ function FetchDefaultTypes() {
                 listItem.textContent = project.name;
                 listItem.addEventListener("click", () => {
                     SelectType(project.name, project.stages);
+                    currentProjectName = project.name;
                 });
                 dropdown.append(listItem);
             }

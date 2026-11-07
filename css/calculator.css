@@ -71,6 +71,8 @@ button {
     max-height: 164px;
     top: 57px;
     right: 32px;
+
+    overflow-y: auto;
 }
 
 .addTypeDropdown{
